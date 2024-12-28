@@ -471,7 +471,7 @@ services:
 
   # The redis cache.
   redis:
-    image: redis:latest
+    image: registry.cn-beijing.aliyuncs.com/sunling/redis:latest
     restart: always
     environment:
       REDISCLI_AUTH: ${REDIS_PASSWORD:-difyai123456}
@@ -554,7 +554,7 @@ services:
   # The nginx reverse proxy.
   # used for reverse proxying the API service and Web service.
   nginx:
-    image: nginx:latest
+    image: registry.cn-beijing.aliyuncs.com/sunling/nginx:latest
     restart: always
     volumes:
       - ./nginx/nginx.conf.template:/etc/nginx/nginx.conf.template
